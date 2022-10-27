@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+    
+}
+@font-face {
+    font-family: "fast-hand";
+    src: url(../static/fonts/fast-hand-font/FastHand-lgBMV.ttf);
+}
+@font-face {
+    font-family: "revamped";
+    src: url(../static/fonts/revamped-font/Revamped-X3q1a.ttf) ;
+}
+
+@font-face {
+    font-family: "rocket";
+    src: url(../static/fonts/rocket-rinder-font/RocketRinder-yV5d.ttf);
+}
+
+@font-face {
+    font-family: "space";
+    src: url(../static/fonts/space-quest-font/SpaceQuest-yOY3.ttf);
+}
+
+@font-face {
+    font-family: "star";
+    src: url(../static/fonts/starcruiser-font/Starcruiser-oLpV.ttf);
+}
+html{
+    height: 100%;
+}
+h1{
+    font-family: "revamped"; 
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 1px white;
+}
+body{
+    margin: 0;
+    height: 100%;
+   
+    /* background:linear-gradient(#2B6777 0%,#2B4177 50%,#2B7761 100%) */
+    /* background: -moz-linear-gradient(top,#43cea2,#185a9d); */
+    background: url(/static/img/moon2.jpg) no-repeat center fixed ;
+    background-size: cover;
+    background-origin: content-box;
+    
+}
+.header{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.banners{
+    display: flex;
+    
+}
+.container-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+label{
+    font-family: "rocket";
+    background-color: none;
+    border: 1px solid white;
+    color:white;
+    cursor:pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+input[type="radio"]{
+    visibility: hidden;
+    display: none;
+}
+input[type=radio]:checked+label{
+    color:black;
+    background: white;
+}
+.container-text{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+textarea{
+
+    font-family: "fast-hand";
+    color: white;
+    min-width: 400px;
+    min-height: 150px;
+    margin:0 auto;
+    margin-bottom: 30px;
+    max-width: 500px;
+    max-height: 200px;
+    border-radius: 5px;
+    background-color:black;
+    border: 1px solid black;
+}
+textarea:link{
+    border:1px solid black;
+    color: black;
+}
+
+button{
+    cursor: pointer;
+    font-family: "star";
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: black;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+button:hover{
+    background-color:white;
+    color: black;
+}
+.output{
+    width: 500px;
+    height: 200px;
+    margin:0 auto;
+    margin-top: 20px;
+    background-color:black;
+    color:white;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: auto;
+
+}
+.footer .download{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.btn-download{
+    text-decoration: none;
+    font-family: "star";
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: black;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+a:hover{
+    background-color:white;
+    color: black;
+}
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 24px;
+    }
+    label{
+        font-size: 12px;
+    }
+    textarea{
+        max-width: 320px;
+        max-height: 150px;
+        min-width: 300px;
+        min-height: 120px;
+    }
+    button{
+        font-size: 12px;
+    }
+
+    .output{
+        height: 120px;
+        width: 380px;
+        font-size: 8px;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    h1{
+        font-size: 20px;
+    }
+    .header{
+        text-align: center;
+    }
+   .banners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   textarea{
+    max-width: 190px;
+    max-height: 60px;
+    min-width: 180px;
+    min-height: 50px;
+   }
+   label{
+    margin-bottom: 5px;
+    width: 80px;
+    text-align: center;
+   }
+   button{
+    font-size: 10px;
+   }
+   .output{
+    width:220px ;
+    font-size: 5px;
+   }
+   label{
+    font-size: 10px;
+   }
+}   

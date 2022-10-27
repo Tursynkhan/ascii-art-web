@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII-ART WEB</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/icons8-planet-32.png">
+</head>
+<body>
+    <header class="header">
+        <h1>Ascii-art-web</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form action="/create" method="POST">
+                <div class="container-banner">
+                        <div class="banners">
+                            <input type="radio" id="standard" name="banner"  value="standard" checked>
+                            <label for="standard" name="pattern">Standard</label><br>
+                        
+                            <input type="radio" id="shadow" name="banner" value="shadow">
+                            <label for="shadow" name="pattern">Shadow</label><br>
+                      
+                            <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                            <label for="thinkertoy" name="pattern">Thinkertoy</label> 
+                        </div>
+                </div>
+                <div class="container-text">
+                    <textarea required name="inputAscii"  placeholder="Input something" maxlength="200" ></textarea>
+                    <!-- <button type="reset" class="button-reset">Reset</button> -->
+                    <p>
+                        <button type="submit" class="button-submit">Submit</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="output">
+                <pre>{{ .Output}}</pre>
+        </div>
+        <div class="download">
+            <a class="btn-download" href="/download">Download</a>
+        </div>
+    </footer>
+</body>
+</html>
