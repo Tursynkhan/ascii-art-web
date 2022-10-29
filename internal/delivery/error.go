@@ -1,4 +1,4 @@
-package main
+package delivery
 
 import (
 	"html/template"
@@ -10,7 +10,7 @@ type errStatus struct {
 	StatusString string
 }
 
-func errorHandler(w http.ResponseWriter, r *http.Request, status errStatus) {
+func ErrorHandler(w http.ResponseWriter, r *http.Request, status errStatus) {
 	w.WriteHeader(status.StatusCode)
 	file := "ui/html/error.html"
 	ts, err := template.ParseFiles(file)

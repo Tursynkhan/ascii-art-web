@@ -1,7 +1,6 @@
 package pkg
 
 import (
-	"log"
 	"main/pkg/src"
 	"net/http"
 )
@@ -14,11 +13,6 @@ func AsciiPrint(asciiTxt, banner string) (string, int) {
 	// 	log.Println(err)
 	// 	return "", 400
 	// }
-	err3 := src.HashValid(banner, pathOfBanners)
-	if err3 != nil {
-		log.Println(err3)
-		return "", 500
-	}
 	args := asciiTxt
 	err1 := src.Isvalid(args)
 	if err1 != 0 {

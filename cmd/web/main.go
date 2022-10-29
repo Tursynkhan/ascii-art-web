@@ -1,19 +1,7 @@
 package main
 
-import (
-	"log"
-	"net/http"
-)
+import "main/internal/app"
 
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", home)
-	mux.HandleFunc("/create", createAscii)
-	mux.HandleFunc("/download", downloadFile)
-	fileServer := http.FileServer(http.Dir("ui/static/"))
-	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
-
-	log.Println("http://127.0.0.1:4000")
-	err := http.ListenAndServe(":4000", mux)
-	log.Fatal(err)
+	app.Run()
 }
